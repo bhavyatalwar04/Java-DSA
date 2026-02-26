@@ -12,5 +12,11 @@ public class sort_array {
         nums.add(0);
         nums.add(5);
         System.out.println(nums);
+        sort(nums);
+        System.out.println(nums);
+    }
+
+    public static void sort(ArrayList<Integer> arr) {
+
     }
 }
