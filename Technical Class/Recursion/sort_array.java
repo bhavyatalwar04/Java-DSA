@@ -17,6 +17,23 @@ public class sort_array {
     }
 
     public static void sort(ArrayList<Integer> arr) {
+        int n = arr.size();
+        if (n == 1) {
+            return;
+        }
+        int x = arr.remove(n - 1);
+        sort(arr);
+        insert(arr, x);
+    }
 
+    public static void insert(ArrayList<Integer> arr, int x) {
+        if (arr.size() == 0 || arr.get(arr.size() - 1) <= x) {
+            arr.add(x);
+            return;
+        }
+
+        int y = arr.remove(arr.size() - 1);
+        insert(arr, x);
+        arr.add(y);
     }
 }
