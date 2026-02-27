@@ -27,7 +27,7 @@ public class sort_array {
     }
 
     public static void insert(ArrayList<Integer> arr, int x) {
-        if (arr.size( == 0 || arr.get(arr.size() - 1) <= x) {
+        if (arr.size() == 0 || arr.get(arr.size() - 1) <= x) {
             arr.add(x);
             return;
         }
