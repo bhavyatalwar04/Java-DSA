@@ -21,11 +21,11 @@ public class reversearr {
             return;
         }
 
-        int last = list.remove(list.size() - 1);
+        int first = list.remove(0);
 
         reverse(list);
 
-        list.add(0, last);
+        list.add(list.size(), first);
 
     }
 }
