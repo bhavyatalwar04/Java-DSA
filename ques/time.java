@@ -10,9 +10,9 @@ public class time {
         int totalSeconds = sc.nextInt();
 
         int hours = totalSeconds / 3600;
-        int remainingSeconds = totalSeconds % 3600;
-        int minutes = remainingSeconds / 60;
-        int seconds = remainingSeconds % 60;
+        int rem = totalSeconds % 3600;
+        int minutes = rem / 60;
+        int seconds = rem % 60;
 
         System.out.println("Time (HH:MM:SS) = "
                 + hours + ":" + minutes + ":" + seconds);

@@ -1,0 +1,13 @@
+
+public class sum_odd {
+
+    public static void main(String[] args) {
+        int n = 5;
+
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += (2 * i - 1);
+        }
+        System.out.println(sum);
+    }
+}
