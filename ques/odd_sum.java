@@ -15,16 +15,14 @@ public class odd_sum {
         int ans = 1;
         boolean odd = false;
 
-        while (n != 0) {
+        while (n > 0) {
             int digit = n % 10;
             if (digit % 2 != 0) {
                 ans *= digit;
                 odd = true;
             }
-            n = n / 10;
+            n /= 10;
         }
-
-        return odd ? ans : 0;
-
+        return odd?ans:0;
     }
 }
