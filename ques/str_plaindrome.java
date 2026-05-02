@@ -12,6 +12,13 @@ public class str_plaindrome {
             if (str.charAt(l) != str.charAt(r)) {
                 palin = false;
             }
+            l++;
+            r--;
+        }
+        if (palin) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not");
         }
     }
 }
