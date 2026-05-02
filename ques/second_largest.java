@@ -4,8 +4,8 @@ public class second_largest {
     public static void main(String[] args) {
         int[] arr = {1, 4, 5, 8, 3, 4, 7};
 
-        int first = arr[0];
-        int second = arr[0];
+        int first = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
 
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > first) {
@@ -14,8 +14,7 @@ public class second_largest {
             } else if (arr[i] > second && arr[i] != first) {
                 second = arr[i];
             }
-
         }
-        System.out.println(second);
+        System.out.println("Second: " + second);
     }
 }

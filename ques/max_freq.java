@@ -2,29 +2,30 @@
 public class max_freq {
 
     public static void main(String[] args) {
-        int num = 1224766766;
+        int n = 0;
 
         int[] freq = new int[10];
 
-        if (num == 0) {
+        if (n == 0) {
             freq[0]++;
         }
 
-        while (num > 0) {
-            int digit = num % 10;
+        while (n > 0) {
+            int digit = n % 10;
             freq[digit]++;
-            num = num / 10;
+            n /= 10;
         }
 
-        int maxCount = freq[0];
+        int max_freq = 0;
         int maxDigit = 0;
 
-        for (int i = 1; i < 10; i++) {
-            if (maxCount < freq[i]) {
-                maxCount = freq[i];
+        for (int i = 0; i < 10; i++) {
+            if (freq[i] > max_freq) {
+                max_freq = freq[i];
                 maxDigit = i;
             }
         }
+
         System.out.println(maxDigit);
     }
 }
