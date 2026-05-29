@@ -19,6 +19,8 @@ public class implement {
         // display(a);
         System.out.println(size(a));
         System.out.println(sum(a));
+        System.out.println(prod(a));
+        System.out.println(maximum(a));
 
     }
 
@@ -42,6 +44,21 @@ public class implement {
             return 0;
         }
         return root.val + sum(root.left) + sum(root.right);
+    }
+
+    private static int prod(Node root) {
+        int product = 1;
+        if (root == null) {
+            return 1;
+        }
+        return product * root.val * prod(root.left) * prod(root.right);
+    }
+
+    private static int maximum(Node root) {
+        if (root == null) {
+            return Integer.MIN_VALUE;
+        }
+        return Math.max(root.val, Math.max(maximum(root.left), maximum(root.right)));
     }
 
     static class Node {
