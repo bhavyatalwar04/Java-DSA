@@ -22,6 +22,7 @@ public class implement {
         System.out.println(prod(a));
         System.out.println(maximum(a));
         System.out.println(minimum(a));
+        System.out.println(level(a));
 
     }
 
@@ -67,6 +68,13 @@ public class implement {
             return Integer.MAX_VALUE;
         }
         return Math.min(root.val, Math.min(minimum(root.left), minimum(root.right)));
+    }
+
+    private static int level(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        return 1 + Math.max(level(root.left), level(root.right));
     }
 
     static class Node {
