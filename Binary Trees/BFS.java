@@ -17,7 +17,8 @@ public class BFS {
         b.right = e;
         c.left = f;
         c.right = g;
-        levelOrder(a);
+        // levelOrder(a);
+        levelOrderLevelWise(a);
 
     }
 
@@ -35,6 +36,38 @@ public class BFS {
             }
         }
 
+    }
+
+    private static void levelOrderLevelWise(Node root) {
+        Queue<Pair> q = new LinkedList<>();
+        int currentLevel = 0;
+        q.offer(new Pair(root, 0));
+        while (!q.isEmpty()) {
+            Pair front = q.poll();
+            if (front.level != currentLevel) {
+                currentLevel++;
+                System.out.println();
+            }
+            System.out.print(front.node.val + " ");
+            if (front.node.left != null) {
+                q.add(new Pair(front.node.left, front.level + 1));
+            }
+            if (front.node.right != null) {
+                q.add(new Pair(front.node.right, front.level + 1));
+            }
+        }
+
+    }
+
+    static class Pair {
+
+        int level;
+        Node node;
+
+        Pair(Node node, int level) {
+            this.level = level;
+            this.node = node;
+        }
     }
 
     static class Node {
