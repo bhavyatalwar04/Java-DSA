@@ -18,7 +18,20 @@ public class BFS {
         c.left = f;
         c.right = g;
         // levelOrder(a);
-        levelOrderLevelWise(a);
+        // levelOrderLevelWise(a);
+        Kthlevel(a, 0, 2);
+
+    }
+
+    private static void Kthlevel(Node root, int level, int k) {
+        if (root == null) {
+            return;
+        }
+        if (level == k) {
+            System.out.print(root.val + " ");
+        }
+        Kthlevel(root.left, level + 1, k);
+        Kthlevel(root.right, level + 1, k);
 
     }
 
