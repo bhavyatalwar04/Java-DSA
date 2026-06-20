@@ -1,0 +1,20 @@
+
+import java.util.*;
+
+public class Prioritystl {
+
+    public static void main(String[] args) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(10);
+        pq.add(20);
+        pq.add(-30);
+        System.out.println(pq.peek());
+        pq.add(-35);
+        System.out.println(pq.peek());
+        System.out.println(pq.size());
+        pq.remove();
+        System.out.println(pq.peek());
+        System.out.println(pq);
+
+    }
+}
