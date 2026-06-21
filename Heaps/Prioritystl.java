@@ -9,7 +9,7 @@ public class Prioritystl {
         pq.add(20);
         pq.add(-30);
         System.out.println(pq.peek());
-        pq.add(-35);
+        pq.add(35);
         System.out.println(pq.peek());
         System.out.println(pq.size());
         pq.remove();
